@@ -1,0 +1,115 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+#define APP_NAME @"Intocable"
+#define loadNib(nibName) [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] objectAtIndex:0]
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+
+#define IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define IPHONE_4 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )480 ) < DBL_EPSILON )
+#define IOS_7 ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
+#define TXT_PLEASE_WAIT @"Please wait..."
+#define ERROR_NETWORK @"No network connect"
+#define TW_USERNAME     @"grupointocable"
+#define USER_NAME_FB @"Intocables"
+
+#define TXT_MUSIC_ENGLISH @"Music"
+#define TXT_MEDIA_ENGLISH @"Media"
+#define TXT_NEWS_ENGLISH @"News"
+#define TXT_EVENT_ENGLISH @"Events"
+#define TXT_LISTENNOW_ENGLISH @"Listen Now"
+#define TXT_MERCHANDISE_ENGLISH @"Merchandise"
+#define TXT_BIO_ENGLISH @"Bio"
+#define TXT_WATCHNOW_ENGLISH @"Watch Now"
+#define TXT_PREFEREECES_ENGLISH @"Preferences"
+#define TXT_MORE_ENGLISH @"More"
+#define TXT_LANGUAGE_ENGLISH @"Language"
+#define TXT_UPDATE_ENGLISH @"Updates"
+#define TXT_NOTIFICATION_ENGLISH @"Notifications"
+#define TXT_ABOUT_APPLICATION_ENGLISH @"About Application"
+
+
+#define TXT_MUSIC_ESPANOL @"Musica"
+#define TXT_MEDIA_ESPANOL @"Media"
+#define TXT_NEWS_ESPANOL @"Noticias"
+#define TXT_EVENT_ESPANOL @"Eventos"
+#define TXT_LISTENNOW_ESPANOL @"Escuchar"
+#define TXT_MERCHANDISE_ESPANOL @"Productos"
+#define TXT_BIO_ESPANOL @"Biofrafía"
+#define TXT_WATCHNOW_ESPANOL @"Ver Ahora"
+#define TXT_PREFEREECES_ESPANOL @"Preferencias"
+#define TXT_MORE_ESPANOL @"Mas"
+
+
+
+#define TXT_LANGUAGE_ESPANOL @"Lenguaje"
+#define TXT_UPDATE_ESPANOL @"Actualizaciones"
+#define TXT_NOTIFICATION_ESPANOL @"Notificaciones"
+#define TXT_ABOUT_APPLICATION_ESPANOL @"Acerca de la Applicación"
+
+// DEFINE LINK ENGLISH
+#define LINK_MUSIC_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/music/index.xml"
+#define LINK_MEDIA_VIDEO_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/videos/index.xml"
+#define LINK_MEDIA_PHOTO_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/photos/index.xml"
+#define LINK_NEW_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/news/index.xml"
+#define LINK_EVENT_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/events/index.xml"
+#define LINK_EVENT_DETAIL_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/eventdetails/%@.xml"
+#define LINK_LISTEN_NOW_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/listen/index.xml"
+#define LINK_MERCHARSE_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/products/index.xml"
+#define LINK_MERCHARSE_DETAIL_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/productdetail/%@.xml"
+#define LINK_BIO_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/bio/index.xml"
+#define LINK_ABOUT_ENGLISH @"http://www.grupointocable.com/_ws/intocable/english/xml/about/index.xml"
+// DEFINE LINK Spanish
+
+#define LINK_MUSIC_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/music/index.xml"
+
+#define LINK_MEDIA_VIDEO_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/videos/index.xml"
+
+#define LINK_MEDIA_PHOTO_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/photos/index.xml"
+#define LINK_NEW_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/news/index.xml"
+#define LINK_EVENT_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/events/index.xml"
+#define LINK_EVENT_DETAIL_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/eventdetails/%@.xml"
+#define LINK_LISTEN_NOW_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/listen/index.xml"
+#define LINK_MERCHARSE_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/products/index.xml"
+#define LINK_MERCHARSE_DETAIL_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/productdetail/%@.xml"
+#define LINK_BIO_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/bio/index.xml"
+#define LINK_ABOUT_SPANISH @"http://www.grupointocable.com/_ws/intocable/spanish/xml/about/index.xml"
+
+
+
+#define BUY_ENGLISH @"Buy"
+#define BUY_SPANISH @"Comprar"
+#define PHOTO_ENGLISH @"Photos"
+#define PHOTO_SPANISH @"Fotos"
+#define FLYER_ENGLISH @"Flyer"
+#define FLYER_SPANISH @"Poster"
+
+#define VIEW_MAP_ENGLISH @"View Map"
+#define VIEW_MAP_SPANISH @"Ver Mapa"
+#define PURCHASE_ENGLISH @"Purchase Ticket"
+#define PURCHASE_SPAINSH @"Comprar Boletos"
+#define CHECK_ENGLISH @"Check"
+#define CHECK_SPANISH @"Registrarse"
+
+#define POST_A_COMMENT_ENGLISH @"Post a Comment"
+#define POST_A_COMMENT_SPAINSH @"Enviar Comentario"
+
+#define ABOUT_APP_ENGLISH @"About App Page"
+#define ABOUT_APP_SPAINSH @"Acerca del App"
+
+#define AUTO_UPDATE_ENGLISH @"Automatically Updates"
+#define AUTO_UPDATE_SPAINSH @"Actualizaciones Automaticas"
